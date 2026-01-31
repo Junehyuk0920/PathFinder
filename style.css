@@ -1,0 +1,274 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+button, a
+{
+    cursor: pointer;
+}
+
+header
+{
+    height: 100px;
+    padding: 20px 30px;
+    background-color: #05614e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1
+{
+    color: #fefefe;
+    font-weight: 400;
+}
+
+header h1 b
+{
+    font-weight: 600;
+}
+
+header a
+{
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+header a:hover
+{
+    text-decoration: underline;
+}
+
+textarea
+{
+    width: 100%;
+    height: 500px;
+    padding: 20px;
+    resize: none;
+}
+
+.container
+{
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.buttons button
+{
+    width: 48%;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 0.5s;
+    border: 2px solid #05614e;
+}
+
+.buttons button:not(#analyse)
+{
+    background-color: #fff;
+    color: #05614e;
+    font-weight: 500;
+}
+
+.buttons button:not(#analyse):hover
+{
+    background-color: #05614e;
+    color: #fff;
+    font-weight: 400;
+}
+
+#analyse
+{
+    background-color: #05614e;
+    color: #fff;
+    font-weight: 400;
+}
+
+#analyse:hover
+{
+    background-color: #fff;
+    color: #05614e;
+    font-weight: 500;
+}
+
+.container > div:first-of-type
+{
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#result
+{
+    width: 600px;
+    min-height: 600px;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    padding: 20px;
+    /* white-space: pre-wrap; */
+    line-height: 1.5;
+    word-break: keep-all;
+    font-size: 15px;
+}
+
+#result b.title
+{
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    border-top: 1px solid #e9e9e9;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#result b.title:first-child
+{
+    margin-top: 0;
+    border: none;
+}
+
+#result u
+{
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 5px;
+    display: block;
+}
+
+.answer
+{
+    font-size: 15px;
+    display: none;
+    margin-top: 10px;
+}
+
+#showAnswer
+{
+    background-color: #05614e;
+    padding: 10px;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.line
+{
+    width: 2px;
+    height: 600px;
+    background-color:#e9e9e9;
+}
+
+#closeText
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: calc((600px - 30px) / 2);
+    left: -15px;
+}
+
+.loading
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.white
+{
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.loading .white h3
+{
+    color: #ef2a29;
+    margin-bottom: 5px;
+}
+
+.loading .white h3::before
+{
+    content: "* ";
+}
+
+.loading .white h3:first-of-type
+{
+    margin-top: 30px;
+}
+
+.ads
+{
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 250px;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.msg
+{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    width: 100%;
+    color: #454545;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+@media (max-width: 1400px)
+{
+    .container
+    {
+        justify-content: center;
+    }
+
+    .container > div:first-child, #result
+    {
+        width: 90vw;
+    }
+
+    #result
+    {
+        margin-top: 50px;
+    }
+
+    .line
+    {
+        display: none;
+    }
+}
