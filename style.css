@@ -228,7 +228,7 @@ textarea
     left: -15px;
 }
 
-.loading
+.loading_black
 {
     position: fixed;
     top: 0;
@@ -242,7 +242,7 @@ textarea
     align-items: center;
 }
 
-.white
+.loading_white
 {
     width: 80%;
     height: 80%;
@@ -252,18 +252,18 @@ textarea
     position: relative;
 }
 
-.loading .white h3
+.loading_black .loading_white h3
 {
     color: #ef2a29;
     margin-bottom: 5px;
 }
 
-.loading .white h3::before
+.loading_black .loading_white h3::before
 {
     content: "* ";
 }
 
-.loading .white h3:first-of-type
+.loading_black .loading_white h3:first-of-type
 {
     margin-top: 30px;
 }
