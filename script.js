@@ -81,7 +81,7 @@ document.querySelector("#analyse").addEventListener("click", async () => {
     }
 
     document.querySelector("#showAnswer").style.display = "none";
-    document.querySelector(".loading").style.display = "flex";
+    document.querySelector(".loading_black").style.display = "flex";
 
     (adsbygoogle = window.adsbygoogle || []).push({});
 
@@ -99,11 +99,11 @@ document.querySelector("#analyse").addEventListener("click", async () => {
     ];
 
     let messageIndex = 0;
-    document.querySelector(".loading .msg").innerText = messages[0];
+    document.querySelector(".loading_black .msg").innerText = messages[0];
 
     const printMessage = setInterval(() => {
         messageIndex = (messageIndex + 1) % messages.length;
-        document.querySelector(".loading .msg").innerText = messages[messageIndex];
+        document.querySelector(".loading_black .msg").innerText = messages[messageIndex];
     }, 3500);
 
     let result = await callAI(document.querySelector("textarea").value, analyse);
@@ -112,7 +112,7 @@ document.querySelector("#analyse").addEventListener("click", async () => {
     console.log(result);
 
     clearInterval(printMessage);
-    document.querySelector(".loading").style.display = "none";
+    document.querySelector(".loading_black").style.display = "none";
     document.querySelector("#result div").innerHTML = result;
 })
 
@@ -124,7 +124,7 @@ document.querySelector("#interview").addEventListener("click", async () => {
     }
 
     document.querySelector("#showAnswer").style.display = "block";
-    document.querySelector(".loading").style.display = "flex";
+    document.querySelector(".loading_black").style.display = "flex";
 
     const messages = [
         "JH PathFinder 면접 모듈을 가동합니다...",
@@ -139,11 +139,11 @@ document.querySelector("#interview").addEventListener("click", async () => {
     ];
 
     let messageIndex = 0;
-    document.querySelector(".loading .msg").innerText = messages[0];
+    document.querySelector(".loading_black .msg").innerText = messages[0];
 
     const printMessage = setInterval(() => {
         messageIndex = (messageIndex + 1) % messages.length;
-        document.querySelector(".loading .msg").innerText = messages[messageIndex];
+        document.querySelector(".loading_black .msg").innerText = messages[messageIndex];
     }, 3500);
 
     let result = await callAI(document.querySelector("textarea").value, interview);
@@ -152,7 +152,7 @@ document.querySelector("#interview").addEventListener("click", async () => {
     console.log(result);
 
     clearInterval(printMessage);
-    document.querySelector(".loading").style.display = "none";
+    document.querySelector(".loading_black").style.display = "none";
     document.querySelector("#result div").innerHTML = result;
 
     document.querySelector("#showAnswer").addEventListener("click", () => {
