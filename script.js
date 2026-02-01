@@ -145,45 +145,47 @@ document.querySelector("#interview").addEventListener("click", async () => {
     clearInterval(printMessage);
     document.querySelector(".loading_black").style.display = "none";
     document.querySelector("#result div").innerHTML = result;
-
-    document.querySelector("#showAnswer").addEventListener("click", () => {
-        isAnswerOpened = !isAnswerOpened;
-
-        if (isAnswerOpened)
-        {
-            document.querySelector(".answer").style.display = "block";
-            document.querySelector("#showAnswer").innerText = "모범 답안 접기";
-        }
-        else
-        {
-            document.querySelector(".answer").style.display = "none";
-            document.querySelector("#showAnswer").innerText = "모범 답안 확인";
-        }
-    })
 })
 
 let isAnswerOpened = false;
 let isTextClosed = false;
 
-document.querySelector("#closeText").addEventListener("click", () => {
-    isTextClosed = !isTextClosed;
+document.addEventListener("click", (e) => {
+    if (e.target && e.target.id === "showAnswer") {
+        isAnswerOpened = !isAnswerOpened;
 
-    if (isTextClosed)
-    {
-        document.querySelector("#closeText").innerHTML = `<i class="fa-solid fa-angles-right"></i>`;
-        document.querySelector(".container > div:first-child").style.display = "none";
-        document.querySelector("#result").style.width = "calc(100vw - 50px)";
-        document.querySelector("#result").style.marginLeft = "50px";
-        document.querySelector(".line").style.backgroundColor = "transparent";
-        document.querySelector(".line").style.position = "absolute";
+        const answerDiv = document.querySelector(".answer");
+        const btn = e.target; // 이미 클릭된 타겟이므로 querySelector를 다시 쓸 필요가 없습니다.
+
+        if (isAnswerOpened) {
+            answerDiv.style.display = "block";
+            btn.innerText = "모범 답안 접기";
+        } else {
+            answerDiv.style.display = "none";
+            btn.innerText = "모범 답안 확인";
+        }
     }
-    else
+    else if (e.target && e.target.id === "closeText")
     {
-        document.querySelector("#closeText").innerHTML = `<i class="fa-solid fa-angles-left"></i>`;
-        document.querySelector(".container > div:first-child").style.display = "flex";
-        document.querySelector("#result").style.width = "600px";
-        document.querySelector("#result").style.marginLeft = "0";
-        document.querySelector(".line").style.backgroundColor = "#e9e9e9";
-        document.querySelector(".line").style.position = "static";
+        isTextClosed = !isTextClosed;
+
+        if (isTextClosed)
+        {
+            document.querySelector("#closeText").innerHTML = `<i class="fa-solid fa-angles-right"></i>`;
+            document.querySelector(".container > div:first-child").style.display = "none";
+            document.querySelector("#result").style.width = "calc(100vw - 50px)";
+            document.querySelector("#result").style.marginLeft = "50px";
+            document.querySelector(".line").style.backgroundColor = "transparent";
+            document.querySelector(".line").style.position = "absolute";
+        }
+        else
+        {
+            document.querySelector("#closeText").innerHTML = `<i class="fa-solid fa-angles-left"></i>`;
+            document.querySelector(".container > div:first-child").style.display = "flex";
+            document.querySelector("#result").style.width = "600px";
+            document.querySelector("#result").style.marginLeft = "0";
+            document.querySelector(".line").style.backgroundColor = "#e9e9e9";
+            document.querySelector(".line").style.position = "static";
+        }
     }
-})
+});
