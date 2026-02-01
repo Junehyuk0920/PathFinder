@@ -81,10 +81,11 @@ document.querySelector("#analyse").addEventListener("click", async () => {
     }
 
     document.querySelector("#showAnswer").style.display = "none";
-    document.querySelector(".loading_black").style.display = "flex";
-    document.querySelector(".loading_black").style.setProperty('height', '100vh', 'important');
 
     (adsbygoogle = window.adsbygoogle || []).push({});
+
+    document.querySelector(".loading_black").style.display = "flex";
+    document.querySelector(".loading_black").style.setProperty('height', '100vh', 'important');
 
     const messages = [
         "JH PathFinder 알고리즘을 가동합니다...",
@@ -125,7 +126,11 @@ document.querySelector("#interview").addEventListener("click", async () => {
     }
 
     document.querySelector("#showAnswer").style.display = "block";
+    
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    
     document.querySelector(".loading_black").style.display = "flex";
+    document.querySelector(".loading_black").style.setProperty('height', '100vh', 'important');
 
     const messages = [
         "JH PathFinder 면접 모듈을 가동합니다...",
