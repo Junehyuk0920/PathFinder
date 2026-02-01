@@ -151,18 +151,19 @@ let isAnswerOpened = false;
 let isTextClosed = false;
 
 document.addEventListener("click", (e) => {
-    if (e.target && e.target.id === "showAnswer") {
+    if (e.target && e.target.id === "showAnswer")
+    {
         isAnswerOpened = !isAnswerOpened;
 
-        const answerDiv = document.querySelector(".answer");
-        const btn = e.target; // 이미 클릭된 타겟이므로 querySelector를 다시 쓸 필요가 없습니다.
-
-        if (isAnswerOpened) {
-            answerDiv.style.display = "block";
-            btn.innerText = "모범 답안 접기";
-        } else {
-            answerDiv.style.display = "none";
-            btn.innerText = "모범 답안 확인";
+        if (isAnswerOpened)
+        {
+            document.querySelector(".answer").style.display = "block";
+            document.querySelector("showAnswer").innerText = "모범 답안 접기";
+        }
+        else
+        {
+            document.querySelector(".answer").style.display = "none";
+            document.querySelector("showAnswer").innerText = "모범 답안 확인";
         }
     }
     else if (e.target && e.target.id === "closeText")
