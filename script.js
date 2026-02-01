@@ -60,26 +60,13 @@ const interview = `
 
 async function callAI(userContent, prompt)
 {
-    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    const response = await fetch('/api/completion', {
         method: 'POST',
         headers: {
-            Authorization: 'Bearer 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',
-            'HTTP-Referer': 'http://127.0.0.1:5500',
-            'X-Title': 'JH Pathfinder',
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            model: "arcee-ai/trinity-large-preview:free",
-            messages: [
-                {
-                    "role": "system",
-                    "content": prompt
-                },
-                {
-                    "role": "user",
-                    "content": userContent
-                }
-            ],
+            userContent, prompt
         }),
     });
 
