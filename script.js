@@ -83,6 +83,8 @@ document.querySelector("#analyse").addEventListener("click", async () => {
     document.querySelector("#showAnswer").style.display = "none";
     document.querySelector(".loading").style.display = "flex";
 
+    (adsbygoogle = window.adsbygoogle || []).push({});
+
     const messages = [
         "JH PathFinder 알고리즘을 가동합니다...",
         "생활기록부 텍스트 데이터 정밀 스캐닝 중...",
