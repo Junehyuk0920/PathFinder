@@ -57,6 +57,21 @@ const interview = `
     3. 이상한 입력: 입력값이 공백이거나 무의미한 단어(예: "안녕", "테스트")일 경우에도 동일하게 처리하십시오.
 `;
 
+let isAdLoaded = false;
+
+function showAd()
+{
+    if (!isAdLoaded)
+    {
+        try {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            isAdLoaded = true;
+        } catch (e) {
+            console.error("광고 로딩 실패:", e);
+        }
+    }
+}
+
 async function callAI(userContent, prompt)
 {
     const response = await fetch('/api/completion', {
@@ -82,7 +97,7 @@ document.querySelector("#analyse").addEventListener("click", async () => {
 
     document.querySelector("#showAnswer").style.display = "none";
 
-    (adsbygoogle = window.adsbygoogle || []).push({});
+    showAd();
 
     document.querySelector(".loading_black").style.display = "flex";
     document.querySelector(".loading_black").style.setProperty('height', '100vh', 'important');
@@ -127,7 +142,7 @@ document.querySelector("#interview").addEventListener("click", async () => {
 
     document.querySelector("#showAnswer").style.display = "block";
     
-    (adsbygoogle = window.adsbygoogle || []).push({});
+    showAd();
     
     document.querySelector(".loading_black").style.display = "flex";
     document.querySelector(".loading_black").style.setProperty('height', '100vh', 'important');
