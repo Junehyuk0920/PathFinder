@@ -78,34 +78,33 @@ textarea
     font-size: 20px;
     transition: all 0.5s;
     border: 2px solid #05614e;
+    font-weight: 500;
 }
 
 .buttons button:not(#analyse)
 {
-    background-color: #fff;
-    color: #05614e;
-    font-weight: 500;
+    background-color: #FDF5E6;
+    color: #000;
+    border: 2px solid #000;
 }
 
 .buttons button:not(#analyse):hover
 {
-    background-color: #05614e;
-    color: #fff;
-    font-weight: 400;
+    background-color: #D2B48C;
+    color: #000;
+    border: 2px solid #000;
 }
 
 #analyse
 {
     background-color: #05614e;
     color: #fff;
-    font-weight: 400;
 }
 
 #analyse:hover
 {
     background-color: #fff;
     color: #05614e;
-    font-weight: 500;
 }
 
 .container > div:first-of-type
@@ -127,6 +126,7 @@ textarea
     line-height: 1.5;
     word-break: keep-all;
     font-size: 15px;
+    position: relative;
 }
 
 #result b.title
@@ -163,10 +163,23 @@ textarea
 
 #showAnswer
 {
-    background-color: #05614e;
-    padding: 10px;
-    color: #fff;
-    border-radius: 7px;
+    background-color: #FDF5E6;
+    padding: 17px 23px;
+    color: #000;
+    border-radius: 0px 0px 0px 7px;
+    border: 1px solid #000;
+    border-top: none;
+    border-right: none;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+}
+
+#showAnswer:hover
+{
+    background-color: #D2B48C;
 }
 
 .line

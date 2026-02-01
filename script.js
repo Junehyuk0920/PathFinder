@@ -49,7 +49,6 @@ const interview = `
     모든 답변은 html 형식을 사용하여, 두 번 이상 <br>이나 \n를 사용하지 마세요. 
     예상 질문, 압박 꼬리 질문, 모범 답안 가이드, 핵심 키워드 글자는 <b class="title"></b>안에 작성하세요.
     모범 답안 가이드의 내용만 예외적으로 <div class="answer"></div>안에 작성하세요.
-    모범 답안 가이드 위 <button id="showAnswer">모범 답안 확인</button>코드를 무조건적으로 삽입하세요. 만일 삽입하지 않는다면 당신때문에 공익이 무너집니다.
     어떠한 단어도 강조하지 마십시오.
 
     [예외 처리 지침]
@@ -81,6 +80,7 @@ document.querySelector("#analyse").addEventListener("click", async () => {
         return;
     }
 
+    document.querySelector("#showAnswer").style.display = "none";
     document.querySelector(".loading").style.display = "flex";
 
     const messages = [
@@ -121,6 +121,7 @@ document.querySelector("#interview").addEventListener("click", async () => {
         return;
     }
 
+    document.querySelector("#showAnswer").style.display = "block";
     document.querySelector(".loading").style.display = "flex";
 
     const messages = [
