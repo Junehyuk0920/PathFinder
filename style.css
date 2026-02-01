@@ -174,11 +174,11 @@ textarea
     border: 1px solid #000;
     border-top: none;
     border-right: none;
-    display: block;
     position: absolute;
     top: 0;
     right: 0;
     transition: all 0.5s;
+    display: none;
 }
 
 #showAnswer:hover
