@@ -82,7 +82,7 @@ document.querySelector("#analyse").addEventListener("click", async () => {
 
     document.querySelector("#showAnswer").style.display = "none";
     document.querySelector(".loading_black").style.display = "flex";
-    document.querySelector(".loading").style.setProperty('height', '100vh', 'important');
+    document.querySelector(".loading_black").style.setProperty('height', '100vh', 'important');
 
     (adsbygoogle = window.adsbygoogle || []).push({});
 
