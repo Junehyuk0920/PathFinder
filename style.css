@@ -268,17 +268,6 @@ textarea
     margin-top: 30px;
 }
 
-.ads
-{
-    display: block;
-    border: solid;
-    width: 100%;
-    min-width: 250px;
-    background-color: rgba(0, 0, 0, 0.1);
-    min-height: 250px;
-    margin-top: 50px;
-}
-
 .msg
 {
     text-align: center;
