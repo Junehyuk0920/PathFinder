@@ -122,11 +122,15 @@ textarea
     border: 1px solid #767676;
     border-radius: 2px;
     padding: 20px;
-    /* white-space: pre-wrap; */
+    position: relative;
+}
+
+#result div
+{
     line-height: 1.5;
     word-break: keep-all;
     font-size: 15px;
-    position: relative;
+    margin-top: 20px;
 }
 
 #result b.title
@@ -170,7 +174,7 @@ textarea
     border: 1px solid #000;
     border-top: none;
     border-right: none;
-    display: none;
+    display: block;
     position: absolute;
     top: 0;
     right: 0;

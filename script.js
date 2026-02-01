@@ -111,7 +111,7 @@ document.querySelector("#analyse").addEventListener("click", async () => {
 
     clearInterval(printMessage);
     document.querySelector(".loading").style.display = "none";
-    document.querySelector("#result").innerHTML = result;
+    document.querySelector("#result div").innerHTML = result;
 })
 
 document.querySelector("#interview").addEventListener("click", async () => {
@@ -151,7 +151,7 @@ document.querySelector("#interview").addEventListener("click", async () => {
 
     clearInterval(printMessage);
     document.querySelector(".loading").style.display = "none";
-    document.querySelector("#result").innerHTML = result;
+    document.querySelector("#result div").innerHTML = result;
 
     document.querySelector("#showAnswer").addEventListener("click", () => {
         isAnswerOpened = !isAnswerOpened;
