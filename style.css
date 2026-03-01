@@ -107,14 +107,14 @@ textarea
 
 .buttons button:not(#analyse)
 {
-    background-color: #FDF5E6;
+    background-color: #eee;
     color: #000;
     border: 1px solid #000;
 }
 
 .buttons button:not(#analyse):hover
 {
-    background-color: #D2B48C;
+    background-color: #ddd;
     color: #000;
     border: 1px solid #000;
 }
