@@ -47,7 +47,7 @@ header
 
 header h1
 {
-    margin: 30px 60px;
+    margin: 30px 40px;
     color: #fefefe;
     font-weight: 400;
 }
@@ -81,7 +81,7 @@ textarea
 
 .container
 {
-    padding: 30px 50px;
+    padding: 30px 40px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
